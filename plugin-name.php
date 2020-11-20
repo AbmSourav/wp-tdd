@@ -17,4 +17,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-echo esc_html__( 'Hello Universe...', 'wp-tdd' );
+echo esc_html__( 'Hello Universe.', 'wp-tdd' );
