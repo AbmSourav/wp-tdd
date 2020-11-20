@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP TDD
  * Description: A Test-Driven Development WordPress plugin starter.
- * Version:     0.0.2
+ * Version:     0.0.1
  * Author:      Keramot UL Islam
  * Author URI:  https://abmsourav.com/
  * Requires PHP: 5.4
@@ -17,4 +17,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-echo esc_html__( 'Hello Universe.....', 'wp-tdd' );
+echo esc_html__( 'Hello Universe...', 'wp-tdd' );
