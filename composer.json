@@ -1,0 +1,20 @@
+{
+	"name": "sourav/wptdd",
+	"description": "A Test-Driven Development WordPress plugin starter.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Keramot UL Islam",
+			"email": "keramotul.islam@gmail.com"
+		}
+	],
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^2.3.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+		"phpcompatibility/php-compatibility": "^9.3.5"
+	},
+	"scripts": {
+		"cs": "phpcs --standard=phpcs.xml ./**",
+		"pcs": "phpcs --standard=phpcs.xml --report-full=.phpcs-log.txt ./**"
+	}
+}
