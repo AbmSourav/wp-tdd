@@ -1,6 +1,9 @@
 # wp-tdd
 A Test-Driven Development WordPress plugin starter
 
+<br>
+<br>
+
 ## Setup
 1. Move `pre-commit` file to `.git/hooks/` folder
 2. Run `composer install`
