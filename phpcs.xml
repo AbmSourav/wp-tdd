@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="Example Project">
+<ruleset name="CrowdfundlyPlugin">
 
 	<description>A custom set of rules to check for a WordPress project</description>
 
@@ -18,25 +18,24 @@
 	<exclude-pattern>/node_modules/*</exclude-pattern>
 
 	<!-- Exclude minified Javascript files. -->
-	<exclude-pattern>assets/*</exclude-pattern>
-	<exclude-pattern>*.min.js</exclude-pattern>
+	<exclude-pattern>admin/css/*</exclude-pattern>
+	<exclude-pattern>admin/js/*</exclude-pattern>
+	<exclude-pattern>admin/images/*</exclude-pattern>
+	<exclude-pattern>admin/customizer/assets/*</exclude-pattern>
+	<exclude-pattern>public/css/*</exclude-pattern>
+	<exclude-pattern>public/js/*</exclude-pattern>
 
 	<!-- Exclude github folder. -->
 	<exclude-pattern>\.github/*</exclude-pattern>
+	<exclude-pattern>admin/dist/*</exclude-pattern>
+	<exclude-pattern>admin/dist/*</exclude-pattern>
 
 	<!-- Add in some extra rules from other standards. -->
 	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
 	<rule ref="Generic.Commenting.Todo"/>
 
-	<rule ref="PHPCompatibility"/>
 	<rule ref="WordPress"/>
-
-	<rule ref="Generic.Metrics.CyclomaticComplexity">
-		<properties>
-			<property name="complexity" value="3"/>
-			<property name="absoluteComplexity" value="5"/>
-		</properties>
-	</rule>
+	<config name="minimum_supported_wp_version" value="4.9"/>
 
 	<rule ref="Generic.Metrics.NestingLevel">
 		<properties>
@@ -48,14 +47,11 @@
 	<rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
 		<severity>0</severity>
 	</rule>
-	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found"/>
-
-	<config name="minimum_supported_wp_version" value="4.9"/>
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="wp-tdd"/>
+				<element value="your_text_domain"/>
 			</property>
 		</properties>
 	</rule>
@@ -63,9 +59,26 @@
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array">
-				<element value="my_prefix"/>
+				<element value="plugin_name"/>
 			</property>
 		</properties>
 	</rule>
+
+	<rule ref="Squiz.Commenting.FunctionComment.Missing">
+		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"/>
+	</rule>
+
+	<rule ref="Squiz.Commenting.FileComment.Missing">
+		<exclude name="Squiz.Commenting.FileComment.Missing"/>
+	</rule>
+
+	<!-- <rule ref="WordPress.NamingConventions.ValidFunctionName">
+		<exclude name="WordPress.NamingConventions.ValidFunctionName"/>
+	</rule> -->
+
+	<!-- <rule ref="WordPress.NamingConventions.ValidVariableName">
+		<exclude name="WordPress.NamingConventions.ValidVariableName"/>
+	</rule> -->
 
 </ruleset>
