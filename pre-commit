@@ -10,7 +10,7 @@ reset=`tput sgr0`
 
 echo "Running PHPCS test before commit...\n"
 
-composer pcs
+composer php-unit-test-automation
 
 filename=".phpcs-log.txt"
 
@@ -21,7 +21,7 @@ then
 	if [ ! -z "$error" ]
 	then
 		echo "\n${orange}${bold}Error Found...${reset} ${bold}Please fix those before commit.${reset}\n"
-		composer cs
+		composer php-unit-test
 		exit 1
 	else
 		echo "${green}Test Status: OK, commiting...${reset}"

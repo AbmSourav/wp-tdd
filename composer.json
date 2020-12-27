@@ -14,7 +14,7 @@
 		"phpcompatibility/php-compatibility": "^9.3.5"
 	},
 	"scripts": {
-		"cs": "phpcs --standard=phpcs.xml ./**",
-		"pcs": "phpcs --standard=phpcs.xml --report-full=.phpcs-log.txt ./**"
+		"php-unit-test": "phpcs --standard=phpcs.xml ./**",
+		"php-unit-test-automation": "phpcs --standard=phpcs.xml --report-full=.phpcs-log.txt ./** --warning-severity=0"
 	}
 }
